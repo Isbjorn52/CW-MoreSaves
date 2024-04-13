@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>11</LangVersion>
+    <PathMap>$(MSBuildProjectDirectory)=/Isbjorn52</PathMap> <!-- No doxxing here -->
+    <TargetName>Isbjorn52.MoreSaves</TargetName>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="./lib/*.dll">
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="./lib/*/*.dll">
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+
+  <!-- <Target Name="BuildResultToModFolder" AfterTargets="Build">
+    <Message Text="Copying build result to mod folder" Importance="high" />
+    <Copy SourceFiles="$(OutDir)$(ProjectName).dll" DestinationFolder="../mod/plugins" Retries="3" RetryDelayMilliseconds="300" />
+    <Copy SourceFiles="$(OutDir)$(ProjectName).pdb" DestinationFolder="../mod/plugins" Retries="3" RetryDelayMilliseconds="300" />
+    <ItemGroup>
+      <_CopyItems Include="../mod/**" />
+    </ItemGroup>
+  </Target> -->
+</Project>
